@@ -22,9 +22,8 @@ jobs:
       - checkout
       - restore_cache:
           keys: "npm-packages"
-      - run:
-          - npm i
-          - npm run test
+      - run: npm i
+      - run: npm run test
   analyze:
     docker:
     - image: circleci/node:13.8.0
